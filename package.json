@@ -1,5 +1,5 @@
 {
-  "name": "vue_demo_project",
+  "name": "gshop-client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,9 +7,21 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "config": {
+    "nuxt": {
+      "host": "localhost",
+      "port": "8080"
+    }
+  },
   "dependencies": {
+    "ajv": "^6.12.6",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "PubSub": "^4.0.0",
+    "pubsub-js": "^1.9.3",
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.2",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -26,8 +38,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
+      "plugin:vue/essential"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
