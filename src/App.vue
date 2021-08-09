@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <footer-guide></footer-guide>
+    <footer-guide v-show="$route.meta.showFooter"></footer-guide>
   </div>
 </template>
 
@@ -9,9 +9,14 @@
 
 
   import FooterGuide from "@/components/FooterGuide/FooterGuide";
+  import {reqFoodTypes} from "@/api";
   export default {
     components: {
       FooterGuide
+    },
+    async mounted() {
+      const result=await reqFoodTypes()
+      console.log(result)
     }
   }
 
